@@ -19,7 +19,7 @@ class TextViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         customText.font = UIFont(name: "AvenirNext-Italic", size: 16)
         customText.layer.borderWidth = 0.8
         customText.layer.cornerRadius = 7.0
-        customText.layer.borderColor = UIColor.blue.cgColor
+        customText.layer.borderColor = UIColor.orange.cgColor
         
         return customText
     }()
@@ -29,7 +29,7 @@ class TextViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor(red: 23/255, green: 30/255, blue: 48/255, alpha: 1)
         
         customTextView.delegate = self
         
@@ -48,16 +48,25 @@ class TextViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         let bar = UIToolbar()
         let flex = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
         let photoLabel = UIBarButtonItem(title: "Add Photo", style: .plain, target: self, action: #selector(imageTapped))
+        let dismissLabel = UIBarButtonItem(title: "Dismiss Keyboard", style: .plain, target: self, action: #selector(dismissedKeyboard))
         
         photoLabel.tintColor = .yellow
-        photoLabel.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBoldItalic", size: 11) ?? 0] , for: .normal)
+        photoLabel.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBoldItalic", size: 11)!] , for: .normal)
         
-        bar.items = [photoLabel,flex]
-        bar.barTintColor = .green
+        dismissLabel.tintColor = .yellow
+        dismissLabel.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBoldItalic", size: 11)!] , for: .normal)
+        
+        bar.items = [photoLabel, flex, dismissLabel]
+        bar.barTintColor = .darkGray
         bar.sizeToFit()
         
         customTextView.inputAccessoryView = bar
         
+    }
+    
+    @objc func dismissedKeyboard() {
+        
+        view.endEditing(true)
     }
     
     //MARK: - Image TextAttachment
