@@ -19,7 +19,7 @@ class TextViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         customText.font = UIFont(name: "AvenirNext-Italic", size: 16)
         customText.layer.borderWidth = 0.8
         customText.layer.cornerRadius = 7.0
-        customText.layer.borderColor = UIColor.orange.cgColor
+        customText.layer.borderColor = UIColor.red.cgColor
         
         return customText
     }()
