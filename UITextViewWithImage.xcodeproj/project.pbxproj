@@ -47,6 +47,7 @@
 		C3CDADEF281AAA5A00B4CD18 /* UITextViewWithImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITextViewWithImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CDADF3281AAA5A00B4CD18 /* UITextViewWithImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewWithImageUITests.swift; sourceTree = "<group>"; };
 		C3CDADF5281AAA5A00B4CD18 /* UITextViewWithImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewWithImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C3CDAE02281AB67A00B4CD18 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		C3CDADC6281AAA5400B4CD18 = {
 			isa = PBXGroup;
 			children = (
+				C3CDAE02281AB67A00B4CD18 /* README.md */,
 				C3CDADD1281AAA5400B4CD18 /* UITextViewWithImage */,
 				C3CDADE8281AAA5A00B4CD18 /* UITextViewWithImageTests */,
 				C3CDADF2281AAA5A00B4CD18 /* UITextViewWithImageUITests */,
